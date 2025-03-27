@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Hariharan R - Building Tech Solutions | Portfolio',
+  title: 'Hariharan R - Building Tech Solutions | Java Developer',
   description:
     'Hariharan R - Tech-savvy developer skilled in Java, Spring Boot, SQL, and Next.js. Building innovative solutions, collaborating, and aking an impact in tech.',
   keywords: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     icon: '/page-icon.png',
   },
   openGraph: {
-    title: 'Hariharan R - Portfolio',
+    title: 'Hariharan R - Building Tech Solutions | Java Developer',
     description:
       'Explore the portfolio of Hariharan R, featuring innovative solutions and creative development projects.',
     url: 'https://hariharanr1893.vercel.app/',
