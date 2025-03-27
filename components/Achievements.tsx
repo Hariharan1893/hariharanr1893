@@ -47,7 +47,6 @@ export default function Achievements() {
     achievements.map(() => 0),
   );
 
-  // ✅ useEffect at top level to handle image rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setImageIndices((prevIndices) =>
@@ -83,7 +82,7 @@ export default function Achievements() {
           </p>
 
           {/* Grid with Animated Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-25">
             {achievements.map((item, index) => (
               <motion.div
                 key={item.id}
