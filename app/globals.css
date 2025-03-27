@@ -1,26 +1,122 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* ===== Root Variables ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d0319;
+    --foreground: #ffffff;
+    --primary: #7b61ff;
+    --secondary: #a855f7;
+    --tertiary: #ff69b4;
+    --content: rgb(208, 192, 232);
   }
 }
 
+.dark {
+  --background: #0d0319;
+  --foreground: #ffffff;
+  --content: #d1c1e8;
+  --primary: #7b61ff;
+  --secondary: #a855f7;
+  --tertiary: #ff69b4;
+}
+
+/* ===== Global Styles ===== */
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseSlow {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* ===== Utility Classes ===== */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+  animation: gradientMove 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+/* ===== Scrollbar Customization (Optional) ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* ===== Dark Mode Switch (For Next.js) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d0319;
+    --foreground: #ffffff;
+    --content: #d1c1e8;
+    --primary: #7b61ff;
+    --secondary: #a855f7;
+    --tertiary: #ff69b4;
+  }
 }
