@@ -42,8 +42,9 @@ export default function Contact() {
           className="flex flex-col items-center lg:items-start gap-6 lg:w-1/3"
         >
           <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-[#7b61ff] to-[#ff69b4] bg-clip-text">
-            Let's Connect!
+            Let&apos;s Connect!
           </h2>
+
           <p className="text-lg text-[#d1c1e8]/80">
             Feel free to reach out to me via any of these platforms.
           </p>

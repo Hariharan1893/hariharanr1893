@@ -43,6 +43,22 @@ const achievements = [
 ];
 
 export default function Achievements() {
+  const [imageIndices, setImageIndices] = useState<number[]>(
+    achievements.map(() => 0),
+  );
+
+  // ✅ useEffect at top level to handle image rotation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndices((prevIndices) =>
+        prevIndices.map(
+          (index, i) => (index + 1) % achievements[i].images.length,
+        ),
+      );
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="achievements"
@@ -67,66 +83,55 @@ export default function Achievements() {
           </p>
 
           {/* Grid with Animated Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-30">
-            {achievements.map((item, index) => {
-              const [currentImage, setCurrentImage] = useState(0);
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-10">
+            {achievements.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{
+                  opacity: 0,
+                  scale: 0.9,
+                  rotate: index % 2 === 0 ? -5 : 5,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  rotate: index % 2 === 0 ? -5 : 5,
+                }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 0,
+                  boxShadow: '0px 15px 40px rgba(255, 105, 180, 0.5)',
+                }}
+                className="relative bg-gradient-to-r from-[#2a1246] to-[#3a1a5a] p-6 rounded-3xl shadow-2xl flex flex-col items-center w-full h-auto transition-all duration-300 ease-in-out cursor-pointer border border-[#7b61ff] hover:shadow-pink-500"
+              >
+                {/* Animated Image */}
+                <div className="relative w-full h-52 overflow-hidden rounded-xl">
+                  <Image
+                    src={item.images[imageIndices[index]]}
+                    alt="Achievement"
+                    layout="fill"
+                    objectFit="contain"
+                    className="object-center rounded-xl shadow-lg"
+                  />
+                </div>
 
-              useEffect(() => {
-                const interval = setInterval(() => {
-                  setCurrentImage((prev) => (prev + 1) % item.images.length);
-                }, 2000);
-                return () => clearInterval(interval);
-              }, [item.images.length]);
-
-              return (
-                <motion.div
-                  key={item.id}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.9,
-                    rotate: index % 2 === 0 ? -5 : 5,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                    rotate: index % 2 === 0 ? -5 : 5,
-                  }}
-                  transition={{ duration: 0.8, ease: 'easeInOut' }}
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 0,
-                    boxShadow: '0px 15px 40px rgba(255, 105, 180, 0.5)',
-                  }}
-                  className="relative bg-gradient-to-r from-[#2a1246] to-[#3a1a5a] p-6 rounded-3xl shadow-2xl flex flex-col items-center w-full h-auto transition-all duration-300 ease-in-out cursor-pointer border border-[#7b61ff] hover:shadow-pink-500"
+                {/* Title */}
+                <motion.h1
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="text-gray-300 text-center text-lg font-semibold max-w-sm mt-4"
                 >
-                  {/* Animated Image */}
-                  <div className="relative w-full h-52 overflow-hidden rounded-xl ">
-                    <Image
-                      src={item.images[currentImage]}
-                      alt="Achievement"
-                      layout="fill"
-                      objectFit="contain"
-                      className="object-center rounded-xl shadow-lg"
-                    />
-                  </div>
+                  {item.title}
+                </motion.h1>
 
-                  {/* Title */}
-                  <motion.h1
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    className="text-gray-300 text-center text-lg font-semibold max-w-sm mt-4"
-                  >
-                    {item.title}
-                  </motion.h1>
-
-                  {/* Description */}
-                  <p className="mt-4 text-gray-400 text-center text-sm max-w-xs">
-                    {item.description}
-                  </p>
-                </motion.div>
-              );
-            })}
+                {/* Description */}
+                <p className="mt-4 text-gray-400 text-center text-sm max-w-xs">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
