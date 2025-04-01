@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: 'DentaBot',
     category: 'web',
-    image: '/projects/dentabot.png',
+    image: '/projects/Dentabot.png',
     liveUrl: 'https://dentabot.vercel.app/',
     githubUrl: 'https://github.com/Hariharan1893/DentaBot.git',
     description:
@@ -20,7 +20,7 @@ const projects = [
     id: 2,
     title: 'CodeBuddy',
     category: 'web',
-    image: '/projects/codebuddy.png',
+    image: '/projects/Codebuddy.png',
     liveUrl: 'https://yourcodebuddy-one.vercel.app/',
     githubUrl: 'https://github.com/Hariharan1893/codebuddy.git',
     description:
