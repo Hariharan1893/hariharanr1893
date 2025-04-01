@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: 'DentaBot',
     category: 'web',
-    image: '/projects/Dentabot.png',
+    image: '/projects/dentabot.png',
     liveUrl: 'https://dentabot.vercel.app/',
     githubUrl: 'https://github.com/Hariharan1893/DentaBot.git',
     description:
@@ -20,7 +20,7 @@ const projects = [
     id: 2,
     title: 'CodeBuddy',
     category: 'web',
-    image: '/projects/Codebuddy.png',
+    image: '/projects/codebuddy.png',
     liveUrl: 'https://yourcodebuddy-one.vercel.app/',
     githubUrl: 'https://github.com/Hariharan1893/codebuddy.git',
     description:
@@ -28,31 +28,30 @@ const projects = [
   },
   {
     id: 3,
-    title: 'JobQuest API',
+    title: 'NutriCookAI API',
     category: 'backend',
-    image: '/projects/JobQuest.png',
-    githubUrl: 'https://github.com/Hariharan1893/JobQuest-RestAPI.git',
+    image: '/projects/nutricookai.png',
+    githubUrl: 'https://github.com/Hariharan1893/NutriCookAI.git',
     description:
-      'Spring Boot REST API built for managing job postings, including operations to create, search, and retrieve job posts. It uses MongoDB for data storage.',
+      'A lightweight, AI-powered recipe suggestion API that generates personalized meal ideas based on given ingredients, cuisine preferences, and dietary restrictions.',
   },
   {
     id: 4,
-    title: 'Inventory Service API',
+    title: 'RapidSOS API',
     category: 'backend',
-    image: '/projects/InventoryService.png',
-    githubUrl:
-      'https://github.com/Hariharan1893/Inventory-Service-with-Springboot-GraphQL.git',
+    image: '/projects/rapidsos.png',
+    githubUrl: 'https://github.com/Hariharan1893/RapidSOS-API.git',
     description:
-      'This API provides GraphQL-based CRUD operations for managing products, including support for queries, mutations, and pagination.',
+      'A Spring Boot REST API designed for managing users and their emergency contacts efficiently. This API enables users to send SOS alerts via SMS and email to all registered emergency contacts.',
   },
   {
     id: 5,
-    title: 'Event Management API',
+    title: 'ClipLinker - URL Shortener Service',
     category: 'backend',
-    image: '/projects/EventManagement.png',
-    githubUrl: 'https://github.com/Hariharan1893/Event-Management-Api.git',
+    image: '/projects/cliplinker.png',
+    githubUrl: 'https://github.com/Hariharan1893/ClipLinker-API.git',
     description:
-      'Spring Boot application that provides APIs to manage events, venues, categories, and event attendees.',
+      'This project is a URL shortener service that generates shortened URLs for long URLs and provides analytics such as click count and expiry times.',
   },
 ];
 
