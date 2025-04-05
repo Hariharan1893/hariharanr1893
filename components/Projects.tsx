@@ -53,6 +53,34 @@ const projects = [
     description:
       'This project is a URL shortener service that generates shortened URLs for long URLs and provides analytics such as click count and expiry times.',
   },
+  {
+    id: 6,
+    title: 'DtPix Studios - Portfolio Landing page',
+    category: 'web',
+    image: '/projects/DtpixStudios.png',
+    liveUrl: 'https://dtpixstudios.vercel.app/',
+    githubUrl: 'https://github.com/Hariharan1893/DtpixStudios.git',
+    description:
+      "DtPix Studios is a visually captivating and responsive single-page landing site built to showcase a creative agency's services, values, and client trust.",
+  },
+  {
+    id: 7,
+    title: 'AWS S3 File Management API',
+    category: 'backend',
+    image: '/projects/s3-file-mng.png',
+    githubUrl: 'https://github.com/Hariharan1893/S3-File-Management.git',
+    description:
+      'A simple Spring Boot application for managing file uploads, retrievals, and deletions using AWS S3 and MySQL.',
+  },
+  {
+    id: 8,
+    title: 'Email Auto Responder API',
+    category: 'backend',
+    image: '/projects/email-responder.png',
+    githubUrl: 'https://github.com/Hariharan1893/Auto-Email-Responder-Api.git',
+    description:
+      'An intelligent, lightweight Spring Boot API that automatically replies to incoming emails based on message keywords using FreeMarker HTML templates.',
+  },
 ];
 
 export default function Projects() {
