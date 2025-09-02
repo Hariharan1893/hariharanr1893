@@ -134,30 +134,6 @@ export default function Hero() {
                   className="object-cover scale-110 group-hover:scale-100 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-
-                {/* Location Text */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6 }}
-                  className="absolute bottom-6 left-6"
-                >
-                  <div className="text-lg font-bold text-[#d1c1e8]">
-                    Based in
-                    <motion.span
-                      className="block bg-gradient-to-r from-[#7b61ff] to-[#a855f7] bg-clip-text text-transparent"
-                      animate={{ backgroundPosition: ['0% 50%', '100% 50%'] }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        repeatType: 'mirror',
-                      }}
-                      style={{ backgroundSize: '200% 200%' }}
-                    >
-                      Puducherry
-                    </motion.span>
-                  </div>
-                </motion.div>
               </motion.div>
             </div>
           </motion.div>

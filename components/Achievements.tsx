@@ -7,6 +7,13 @@ import { useState, useEffect } from 'react';
 const achievements = [
   {
     id: 1,
+    title: 'Runner-Up | Virtusa Jatayu Season 4 Hackathon',
+    images: ['/achievements/jatayu.jpg'],
+    description:
+      'Runner-Up among 2,348+ team entries in Virtusa Jatayu Season 4 Hackathon – built “Price AI Vision,” a GenAI-powered healthcare pricing transparency platform.',
+  },
+  {
+    id: 2,
     title: 'KochiHackathon 2025 - 2nd Place',
     images: [
       '/achievements/kochihackathon1.png',
@@ -16,14 +23,14 @@ const achievements = [
       'Thrilled to secure 2nd place at KochiHackathon 2025 by Netstratum Technologies—an exhilarating journey of innovation and growth, with inspiring insights from Mamadou Alpha Barry!',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Technuxes Hackathon 2024',
     images: ['/achievements/kingsclg1.png', '/achievements/kingsclg2.png'],
     description:
       'Proud to have participated in the 12-hour Technuxes Hackathon 2024 at Kings Engineering College, Chennai, where we developed an AI-powered interview platform to streamline startup recruitment.',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Zoholics India 2024',
     images: [
       '/achievements/zoholics1.png',
@@ -34,7 +41,7 @@ const achievements = [
       'Honored to represent Lernexia Solutions at Zoholics Events India 2024, engaging in insightful discussions on AI and innovation with industry leaders like Mr. Rajendran Dandapani and Mr. Ramprakash Ramamoorthy.',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Full Stack Workshop - PTU',
     images: ['/achievements/pec.png'],
     description:
